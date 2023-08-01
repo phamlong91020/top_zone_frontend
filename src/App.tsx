@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  const [conut2, setCount2] = useState(2);
+  // const [conut2, setCount2] = useState(2);
 
   return (
     <>

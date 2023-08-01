@@ -8,7 +8,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext=ts,tsx --fix --max-warnings=0",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "husky install",
+    "lint-staged": "yarn run lint && git add ."
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -30,6 +32,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
