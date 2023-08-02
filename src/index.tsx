@@ -3,11 +3,14 @@ import App from './App';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './styles/global.style';
 import './styles/index.css';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = createRoot(document.getElementById('root') as Element);
 
 root.render(
-  <ThemeProvider theme={theme}>
-    <App />
-  </ThemeProvider>
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </BrowserRouter>
 );
