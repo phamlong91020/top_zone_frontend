@@ -1,3 +1,3 @@
-declare module "react-document-events" {
+declare module 'react-document-events' {
   export = any;
 }
