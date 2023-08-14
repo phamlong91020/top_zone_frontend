@@ -1,9 +1,10 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Loading from 'src/components/common/Loading';
+import Loading from '@components/common/Loading';
 
 const MainLayout = lazy(() => import('./components/common/Layout/MainLayout'));
 const Home = lazy(() => import('./components/pages/Home'));
+const Login = lazy(() => import('./components/pages/Login'));
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
+
+          <Route path="login" element={<Login />} />
         </Route>
       </Routes>
     </Suspense>

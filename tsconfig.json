@@ -18,7 +18,15 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "composite": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@common/*": ["./src/common/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["src/common/constants/*"],
+      "@styles/*": ["./src/styles/*"]
+    }
   },
   "include": ["src/**/*", "../http-adapter/**/*", "src/**/*.json"],
   "files": ["./src/react-document-events.d.ts"],
