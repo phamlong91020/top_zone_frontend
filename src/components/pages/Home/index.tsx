@@ -4,8 +4,7 @@ import StyledLogin from './styled';
 
 import { Link } from 'react-router-dom';
 
-import MOBILE_ICON from '@assets/icons/mobile_icon.svg';
-import WATCH_ICON from '@assets/icons/watch_icon.svg';
+import icons from '@/constants/icons';
 
 const HomeLayout: FC<Props> = () => {
   return (
@@ -15,7 +14,7 @@ const HomeLayout: FC<Props> = () => {
           {PRODUCT_LIST.map((item) => (
             <li className="category" key={item.key}>
               <Link to={item.link}>
-                <img src={WATCH_ICON} alt="MOBILE_ICON" />
+                <img src={item.icon} alt="MOBILE_ICON" />
               </Link>
 
               <span className="label">{item.label}</span>
@@ -23,6 +22,8 @@ const HomeLayout: FC<Props> = () => {
           ))}
         </ul>
       </div>
+
+      <div className="carousel-ad"></div>
     </StyledLogin>
   );
 };
@@ -38,96 +39,78 @@ export const PRODUCT_LIST = [
     key: 0,
     label: 'Điện thoại',
     link: '/phones',
-    icon: { MOBILE_ICON } || '',
+    icon: icons.MOBILE_ICON || '',
   },
   {
     key: 1,
     label: 'Đồng hồ',
     link: '/watches',
-    icon: { WATCH_ICON } || '',
+    icon: icons.WATCH_ICON || '',
   },
   {
     key: 2,
     label: 'Laptop',
-    link: '/latop',
-    icon: '',
+    link: '/laptop',
+    icon: icons.LAPTOP_ICON || '',
   },
   {
     key: 3,
-    label: 'Apple ',
-    link: '/apple',
-    icon: '',
+    label: 'Iphone ',
+    link: '/iphone',
+    icon: icons.IPHONE_ICON || '',
   },
   {
     key: 4,
     label: 'Màn hình',
     link: '/screen',
-    icon: '',
+    icon: icons.MONITOR_ICON || '',
   },
   {
     key: 5,
     label: 'Smart TV',
     link: '/smart-tv',
-    icon: '',
+    icon: icons.TV_ICON || '',
   },
   {
     key: 6,
     label: 'Tablet',
     link: '/tablet',
-    icon: '',
+    icon: icons.TABLET_ICON || '',
   },
   {
     key: 7,
     label: 'Âm Thanh',
     link: '/sound',
-    icon: '',
+    icon: icons.HEADPHONE_ICON || '',
   },
   {
     key: 8,
     label: 'Smart Home',
     link: '/smart-home',
-    icon: '',
+    icon: icons.SMART_HOME_ICON || '',
   },
   {
     key: 9,
     label: 'Phụ Kiện',
     link: '/accessories',
-    icon: '',
+    icon: icons.ACCESSORIES_ICON || '',
   },
   {
     key: 10,
     label: 'Đồ chơi CN',
     link: '/',
-    icon: '',
+    icon: icons.GAMEPAD_ICON || '',
   },
   {
     key: 11,
-    label: 'Máy trôi',
-    link: '/phone-used',
-    icon: '',
+    label: 'Sửa chữa',
+    link: '/fix',
+    icon: icons.FIX_ICON || '',
   },
   {
     key: 12,
-    label: 'Sửa chữa',
-    link: '/fix',
-    icon: '',
-  },
-  {
-    key: 13,
-    label: 'Sim thẻ',
-    link: 'sim',
-    icon: '',
-  },
-  {
-    key: 14,
-    label: 'Tin Hot',
-    link: 'news',
-    icon: '',
-  },
-  {
-    key: 15,
     label: 'Ưu đãi',
     link: '/promotion',
-    icon: '',
+    icon: icons.PROMOTION_ICON || '',
   },
 ];
