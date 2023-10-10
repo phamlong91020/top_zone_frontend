@@ -168,7 +168,36 @@ const StyledHeader = styled.div`
       }
     }
 
-    > .navigation-bar {
+    > .search-bar {
+      padding: 20px 0;
+      display: flex;
+
+      > .container {
+        display: flex;
+        justify-content: space-around;
+        min-width: 1200px;
+        width: 1200px;
+        margin: 0 auto;
+
+        > .logo {
+          > img {
+            width: 256px;
+          }
+        }
+
+        > .search-box {
+        }
+
+        > .check-order {
+          width: 110px;
+          background: #00483e;
+          border-radius: 10px;
+          padding: 6px 8px;
+          box-shadow: 0 4px 6px #ccc;
+          color: #fff;
+          font-size: 12px;
+        }
+      }
     }
   }
 

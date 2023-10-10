@@ -11,6 +11,7 @@ import GAMEPAD_ICON from '@assets/icons/gamepad_icon.svg';
 import FIX_ICON from '@assets/icons/fix_icon.svg';
 import PROMOTION_ICON from '@assets/icons/promotion_icon.svg';
 import IPHONE_ICON from '@assets/icons/iphone_icon.svg';
+import SHOPPING_CART_ICON from '@assets/icons/shopping_cart_icon.svg';
 
 export default {
   WATCH_ICON,
@@ -26,4 +27,7 @@ export default {
   FIX_ICON,
   PROMOTION_ICON,
   IPHONE_ICON,
+  SHOPPING_CART_ICON,
+
+  // Test CI_CD
 };

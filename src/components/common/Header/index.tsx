@@ -1,14 +1,15 @@
+/* eslint-disable prefer-const */
 import { FC } from 'react';
 import useHeaderHook, { Props, ReceivedProps } from './hook';
 import StyledHeader from './styled';
 import { MenuOutlined, ShoppingCartOutlined } from '@ant-design/icons';
-import HOANG_HA_LOGO from '../../../assets/images/hoang_ha_logo.svg';
 import { Link } from 'react-router-dom';
 import Button from 'src/common/Button';
 import { BUTTON_THEME } from 'src/common/Button/hook';
 import { Input } from 'antd';
 import Banner from '../Banner';
-
+import images from '@/constants/images';
+import icons from '@/constants/icons';
 export interface Menu {
   key: number;
   label: string;
@@ -23,13 +24,41 @@ export interface Navigation {
 const { Search } = Input;
 
 const HeaderLayout: FC<Props> = () => {
+  // TÌM 2 SỐ TRONG MẢNG CỘNG VÀO NHAU RA SỐ TARGET
+  // const arrNum1 = [1, 4, 7, 9, 11];
+
+  // const twoSum = (arrNum: Array<number>, target: number) => {
+  //   for (let i = 0; i < arrNum.length; i++) {
+  //     console.log('i: ', i);
+  //     for (let j = i + 1; j < arrNum.length; j++) {
+  //       console.log('j: ', j);
+  //       if (arrNum[i] + arrNum[j] === target) {
+  //         return [i, j];
+  //       }
+  //     }
+  //   }
+  // };
+
+  // console.log('result: ', twoSum(arrNum1, 1000));
+
+  // ĐẢO NGƯỢC SỐ ĐẦU CUỐI ĐỀU RA 1 SỐ DUY NHẤT
+  // const isPalindrome = (x: number) => {
+  //   const reversed = `${x}`.split('').reverse().join('');
+
+  //   if (`${x}` === reversed) return true;
+
+  //   return false;
+  // };
+
+  // console.log('reversedNumber: ', isPalindrome(121));
+
   return (
     <StyledHeader>
       <div className="header-mobile">
         <div className="navigation">
           <MenuOutlined className="navbar" />
 
-          <img src={HOANG_HA_LOGO} alt="HOANG_HA_LOGO" />
+          <img src={images.HOANG_HA_LOGO} alt="HOANG_HA_LOGO" />
 
           <div className="cart">
             <ShoppingCartOutlined
@@ -79,7 +108,23 @@ const HeaderLayout: FC<Props> = () => {
           </span>
         </div>
 
-        <div className="navigaton-bar"></div>
+        <div className="search-bar">
+          <div className="container">
+            <div className="logo">
+              <img src={images.HOANG_HA_LOGO} alt="" />
+            </div>
+
+            <div className="search-box">
+              <Search placeholder="Hôm nay bạn cần tìm gì?" />
+            </div>
+
+            <div className="check-order"></div>
+
+            <div className="cart-order">
+              <img src={icons.SHOPPING_CART_ICON} alt="" />
+            </div>
+          </div>
+        </div>
       </div>
     </StyledHeader>
   );
