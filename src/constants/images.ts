@@ -1,5 +1,5 @@
-import HOANG_HA_LOGO from '@assets/images/hoang_ha_logo.svg';
+import TOP_ZONE_LOGO from '@assets/images/topzone.jpg';
 
 export default {
-  HOANG_HA_LOGO,
+  TOP_ZONE_LOGO,
 };

@@ -28,6 +28,4 @@ export default {
   PROMOTION_ICON,
   IPHONE_ICON,
   SHOPPING_CART_ICON,
-
-  // Test CI_CD
 };
