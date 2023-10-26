@@ -12,9 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
-
-          <Route path="login" element={<Login />} />
         </Route>
+
+        <Route path="login" element={<Login />} />
       </Routes>
     </Suspense>
   );

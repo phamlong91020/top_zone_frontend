@@ -1,1 +1,1 @@
-Hello this is docs of Hoang Ha Front-end
+Hello this is documentations of Hoang Ha Front-end
