@@ -25,7 +25,8 @@
       "@common/*": ["./src/common/*"],
       "@components/*": ["./src/components/*"],
       "@constants/*": ["src/common/constants/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@config/*": ["./src/config/*"]
     }
   },
   "include": ["src/**/*", "../http-adapter/**/*", "src/**/*.json"],
