@@ -7,14 +7,6 @@ const StyledLogin = styled.div`
     justify-content: space-between;
   }
 
-  .loading {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-  }
-
   > .left-signup {
     display: none;
 
@@ -26,14 +18,6 @@ const StyledLogin = styled.div`
       background: url(${images.BACKGROUND_AUTH}) no-repeat top center;
       background-size: cover;
       min-height: 100vh;
-
-      > .banner {
-        display: flex;
-        justify-content: center;
-        > img {
-          width: 80%;
-        }
-      }
     }
   }
 

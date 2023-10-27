@@ -5,10 +5,13 @@ import { ROUTE } from '@/constants/route';
 import { loginValidationSchema } from '@/utils/yup/login';
 import { Formik } from 'formik';
 import { Checkbox, Form, Input } from 'formik-antd';
-import { FC } from 'react';
+import { FC, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import StyledLogin from './styled';
 import images from '@/constants/images';
+import api from '@/helpers/api';
+import { LoginForm } from '@/constants/common';
+import { Modal } from 'antd';
 
 const Login: FC = () => {
   const initialValues = {
@@ -17,13 +20,27 @@ const Login: FC = () => {
     isRemember: true,
   };
 
+  const handleLogin = useCallback((values: LoginForm) => {
+    api
+      .post('auth/login', {
+        email: values.email,
+        password: values.password,
+      })
+      .then((res) => {
+        localStorage.setItem('access_token', res?.data?.access_token);
+        localStorage.setItem('refresh_token', res?.data?.refresh_token);
+      })
+      .catch(() => {
+        Modal.error({
+          title: 'Error',
+          content: 'Your email or password is incorrect. Please try again',
+        });
+      });
+  }, []);
+
   return (
     <StyledLogin>
-      <div className="left-signup">
-        {/* <div className="banner">
-          <img src={images.BACKGROUND_AUTH} alt="BANNER_SIGNUP" />
-        </div> */}
-      </div>
+      <div className="left-signup"></div>
 
       <div className="right-signup">
         <div className="form-register">
@@ -40,14 +57,14 @@ const Login: FC = () => {
           <Formik
             initialValues={initialValues}
             onSubmit={async (values, { resetForm }) => {
-              // await handleLogin(values);
-              resetForm({
-                values: {
-                  email: '',
-                  password: '',
-                  isRemember: false,
-                },
-              });
+              handleLogin(values as LoginForm),
+                resetForm({
+                  values: {
+                    email: '',
+                    password: '',
+                    isRemember: false,
+                  },
+                });
             }}
             validationSchema={loginValidationSchema()}
           >

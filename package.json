@@ -15,7 +15,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.3",
     "antd": "^5.8.0",
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "formik": "^2.4.2",
     "formik-antd": "^2.0.4",
     "moment": "^2.29.4",
