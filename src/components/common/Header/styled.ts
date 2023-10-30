@@ -2,211 +2,167 @@ import { styled } from 'styled-components';
 
 const StyledHeader = styled.div`
   > .header-mobile {
+    width: 100%;
+    background: #000;
+    height: 60px;
     @media screen and (min-width: 1024px) {
       display: none;
     }
 
-    background-color: #f4f4f4;
-    padding: 15px 15px 8px 15px;
-    > .navigation {
+    > .header-above {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      height: 100%;
 
-      > .navbar {
-        color: #00483d;
-        font-size: 26px;
-
-        &:hover {
-          color: #009a82;
-          cursor: pointer;
+      > .menu-icon {
+        > a {
+          > img {
+            width: 36px;
+            height: 36px;
+          }
         }
       }
 
-      > img {
-        max-width: 55%;
+      > .topzone-logo {
+        > img {
+          width: 100px;
+          height: 30px;
+        }
       }
 
       > .cart {
         position: relative;
-
-        > .quantity {
-          content: '';
+        > img {
+          width: 26px;
+          height: 26px;
+        }
+        > .cart-items {
           position: absolute;
-          bottom: 10px;
-          right: 0;
-          z-index: 1;
-
+          top: -2px;
+          right: -5px;
+          width: 14px;
+          height: 14px;
           display: flex;
           justify-content: center;
           align-items: center;
-
-          width: 12px;
-          height: 12px;
-          background-color: #ff6801;
-
-          font-size: 8px;
-          color: #fff;
+          background: linear-gradient(
+            to right,
+            rgb(162, 196, 247) 0%,
+            rgb(189, 125, 230) 100%
+          );
         }
-      }
-    }
-
-    > .search-box {
-      padding-top: 12px;
-
-      .ant-input {
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        padding: 8px 12px;
-        box-shadow: 0 4px 6px #ccc;
-        border: none;
-        font-weight: 700;
-        color: #000;
-      }
-
-      .ant-input::placeholder {
-        font-weight: 700 !important;
-        color: #757575;
-      }
-
-      .ant-input:hover {
-        border: none !important;
-        outline: none !important;
-        z-index: 0;
-        border-inline-end-width: 0;
-      }
-
-      .ant-input-group-addon {
-        /* border: 1px solid #ccc; */
-        box-shadow: 0 4px 6px #ccc;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-      }
-
-      .ant-btn-default {
-        height: 40px;
-        width: 40px;
-        background-image: linear-gradient(#00917a, #00483d);
-      }
-
-      .anticon {
-        font-size: 20spx;
-        color: #fff;
       }
     }
   }
 
-  > .header-large-screen {
-    @media screen and (max-width: 1024px) {
-      display: none;
+  > .header-pc {
+    display: none;
+    width: 100%;
+    background: #000;
+    height: 60px;
+    @media screen and (min-width: 1024px) {
+      display: block;
     }
 
-    > .top-banner {
+    > .layout-header-pc {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-
-      > .pulse {
-        position: relative;
-        background: #fd475a;
-        border-radius: 50%;
-        margin: 11px;
-        height: 15px;
-        width: 15px;
-        box-shadow: 0 0 0 0 rgba(233, 156, 176, 1);
-        transform: scale(1);
-      }
-
-      > .pulse::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: #fd475a;
-        border-radius: 50%;
-        z-index: -1;
-        animation: pulse 2s infinite;
-      }
-
-      > p {
-        font-size: 15px;
-        font-weight: 700;
-        padding-right: 10px;
-      }
-
-      .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
-        border-color: #fd475a;
-      }
-    }
-
-    > .menu {
-      background-color: #00483d;
-
-      > .fix-width {
+      min-width: 1024px;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+      height: 60px;
+      > .wrapper-banner {
         display: flex;
-        gap: 14px;
-        padding: 0 12px;
-        justify-content: flex-end;
-        margin: 0 auto;
-
-        @media screen and (min-width: 1200px) {
-          min-width: 1200px;
-          width: 1200px;
-        }
-
-        a {
-          font-size: 13px;
-          color: #fff;
-          padding: 6px 0;
-          text-decoration: none;
-        }
-
-        a:hover {
-          color: #7fd6cb;
-        }
-      }
-    }
-
-    > .search-bar {
-      padding: 20px 0;
-      display: flex;
-
-      > .container {
-        display: flex;
-        justify-content: space-around;
-        min-width: 1200px;
-        width: 1200px;
-        margin: 0 auto;
-
-        > .logo {
+        justify-content: space-between;
+        > .top-zone-logo {
+          padding-right: 12px;
+          border-right: solid 1px #2d2d2d;
           > img {
-            width: 256px;
+            width: 103px;
+            height: 35px;
           }
         }
-
-        > .search-box {
-        }
-
-        > .check-order {
-          width: 110px;
-          background: #00483e;
-          border-radius: 10px;
-          padding: 6px 8px;
-          box-shadow: 0 4px 6px #ccc;
-          color: #fff;
-          font-size: 12px;
+        > .apple-reseller {
+          padding-left: 10px;
+          > img {
+            width: 32px;
+            height: 40px;
+          }
         }
       }
-    }
-  }
-
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-    }
-    100% {
-      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+      > .route-elements {
+        display: flex;
+        > a {
+          display: flex;
+          width: 94px;
+          height: 60px;
+          align-items: center;
+          justify-content: center;
+          > .header-elements {
+            > span {
+              font-size: 14px;
+              color: #fff;
+              font-family: 'Inter';
+            }
+          }
+          @keyframes specialFadeIn {
+            0% {
+              background: transparent;
+            }
+            100% {
+              background: #2d2d2d;
+            }
+          }
+        }
+        > a:hover {
+          animation-delay: 30ms;
+          animation-duration: 400ms;
+          animation-fill-mode: both;
+          animation-name: specialFadeIn;
+        }
+      }
+      > .tools {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        > div {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #2f3033;
+          border-radius: 50%;
+          cursor: pointer;
+          > img {
+            width: 22px;
+            height: 22px;
+          }
+        }
+        > div:hover {
+          background: #5e5e60;
+        }
+        > .cart {
+          position: relative;
+          > .cart-items {
+            position: absolute;
+            top: 5px;
+            right: 4px;
+            width: 14px;
+            height: 14px;
+            display: flex;
+            justify-content: center;
+            background: #ff361d;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 10px;
+          }
+        }
+      }
     }
   }
 `;

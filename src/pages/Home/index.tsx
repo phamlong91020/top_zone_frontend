@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import StyledLogin from './styled';
+import StyledHome from './styled';
 
 const Home: FC = () => {
-  return <StyledLogin></StyledLogin>;
+  return <StyledHome></StyledHome>;
 };
 
 export default Home;
