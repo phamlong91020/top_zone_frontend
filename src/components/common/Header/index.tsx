@@ -75,7 +75,7 @@ const HeaderLayout: FC<Props> = ({ navigate }) => {
           </div>
 
           {THUMBNAIL_ARRAY.map((items, i) => (
-            <div className="thumbnail" key={i}>
+            <div className="thumbnail-header" key={i}>
               <Link to={items.route}>
                 <div className="thumbnail-children">
                   <div className="left-children">
