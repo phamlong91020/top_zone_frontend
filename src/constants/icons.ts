@@ -15,6 +15,8 @@ import TEKZONE_GRADIENT from '@assets/icons/tek_zone_gradient.png';
 import TOP_CARE_GRADIENT from '@assets/icons/top_care_gradient.png';
 import SEARCH_WHITE from '@assets/icons/search_white.png';
 import CART_WHITE from '@assets/icons/cart_white.png';
+import ARROW_RIGHT_WHITE from '@assets/icons/arrow_right_white.png';
+import ARROW_LEFT_WHITE from '@assets/icons/arrow_left_white.png';
 
 export default {
   MENU_ICON,
@@ -34,4 +36,6 @@ export default {
   TOP_CARE_GRADIENT,
   SEARCH_WHITE,
   CART_WHITE,
+  ARROW_RIGHT_WHITE,
+  ARROW_LEFT_WHITE,
 };

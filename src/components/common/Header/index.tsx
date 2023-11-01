@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { ROUTE } from '@/constants/route';
 import { Drawer } from 'antd';
 import images from '@/constants/images';
+import { THUMBNAIL_ARRAY } from '@/constants/common';
 
 const HeaderLayout: FC<Props> = ({ navigate }) => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -115,8 +116,8 @@ const HeaderLayout: FC<Props> = ({ navigate }) => {
           </div>
 
           <div className="route-elements">
-            {THUMBNAIL_ARRAY.map((items) => (
-              <Link to={items.route}>
+            {THUMBNAIL_ARRAY.map((items, i) => (
+              <Link to={items.route} key={i}>
                 <div className="header-elements">
                   <span className="">{items.label}</span>
                 </div>
@@ -145,54 +146,3 @@ const Header: FC<ReceivedProps> = (props) => (
 );
 
 export default Header;
-
-const THUMBNAIL_ARRAY = [
-  {
-    label: 'Iphone',
-    value: 'iphone',
-    route: '/iphone',
-    icon: icons.IPHONE_GRADIENT,
-  },
-  {
-    label: 'Mac',
-    value: 'mac',
-    route: '/mac',
-    icon: icons.MACBOOK_GRADIENT,
-  },
-  {
-    label: 'Ipad',
-    value: 'ipad',
-    route: '/ipad',
-    icon: icons.IPAD_GRADIENT,
-  },
-  {
-    label: 'Watch',
-    value: 'watch',
-    route: '/watch',
-    icon: icons.APPLE_WATCH_GRADIENT,
-  },
-  {
-    label: 'Sound',
-    value: 'sound',
-    route: '/sound',
-    icon: icons.AIRPODS_GRADIENT,
-  },
-  {
-    label: 'Gear',
-    values: 'gear',
-    route: '/gear',
-    icon: icons.ACCESSORIES_GRADIENT,
-  },
-  {
-    label: 'TekZone',
-    values: 'tekZone',
-    route: '/tekZone',
-    icon: icons.TEKZONE_GRADIENT,
-  },
-  {
-    label: 'TopCare',
-    values: 'topCare',
-    route: '/topCare',
-    icon: icons.TOP_CARE_GRADIENT,
-  },
-];
