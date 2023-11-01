@@ -21,6 +21,12 @@ import ADAPTER_5W from '@assets/images/adapter_5w.webp';
 import AIRPODS_PRO_2 from '@assets/images/airpods_pro_2.webp';
 import MACSAFE_SHORTENED_14_PRO_MAX from '@assets/images/magsafe_shortened_14_pro_max.webp';
 import MAGIC_MOUSE from '@assets/images/magic_mouse.webp';
+import IPHONE from '@assets/images/iphone.webp';
+import MAC from '@assets/images/mac.webp';
+import IPAD from '@assets/images/ipad.webp';
+import WATCH from '@assets/images/watch.webp';
+import SOUND from '@assets/images/sound.webp';
+import ACCESSORIES from '@assets/images/accessories.webp';
 
 export default {
   TOP_ZONE_LOGO,
@@ -46,4 +52,10 @@ export default {
   AIRPODS_PRO_2,
   MACSAFE_SHORTENED_14_PRO_MAX,
   MAGIC_MOUSE,
+  IPHONE,
+  MAC,
+  IPAD,
+  WATCH,
+  SOUND,
+  ACCESSORIES,
 };

@@ -24,60 +24,58 @@ export const BANNER_ARRAY = [
 
 export const THUMBNAIL_ARRAY = [
   {
-    label: 'iphone',
+    label: 'iPhone',
     value: 'iphone',
     route: '/iphone',
     icon: icons.IPHONE_GRADIENT,
-    image: '',
+    image: images.IPHONE,
   },
   {
     label: 'Mac',
     value: 'mac',
     route: '/mac',
     icon: icons.MACBOOK_GRADIENT,
-    image: '',
+    image: images.MAC,
   },
   {
-    label: 'ipad',
+    label: 'iPad',
     value: 'ipad',
     route: '/ipad',
     icon: icons.IPAD_GRADIENT,
-    image: '',
+    image: images.IPAD,
   },
   {
     label: 'Watch',
     value: 'watch',
     route: '/watch',
     icon: icons.APPLE_WATCH_GRADIENT,
-    image: '',
+    image: images.WATCH,
   },
   {
     label: 'Sound',
     value: 'sound',
     route: '/sound',
     icon: icons.AIRPODS_GRADIENT,
-    image: '',
+    image: images.SOUND,
   },
   {
     label: 'Gear',
     values: 'gear',
     route: '/gear',
     icon: icons.ACCESSORIES_GRADIENT,
-    image: '',
+    image: images.ACCESSORIES,
   },
   {
     label: 'TekZone',
     values: 'tekZone',
     route: '/tekZone',
     icon: icons.TEKZONE_GRADIENT,
-    image: '',
   },
   {
     label: 'TopCare',
     values: 'topCare',
     route: '/topCare',
     icon: icons.TOP_CARE_GRADIENT,
-    image: '',
   },
 ];
 
