@@ -62,7 +62,6 @@ const StyledLogin = styled.div`
         > h2 {
           color: ${(props) => props.theme.colors.black};
           text-align: center;
-          font-family: 'Inter';
           font-size: 50px;
           font-weight: 700;
           letter-spacing: -0.64px;
@@ -73,7 +72,6 @@ const StyledLogin = styled.div`
         > .have-account {
           > span {
             color: ${(props) => props.theme.colors.black};
-            font-family: 'Inter';
             font-size: 18px;
             font-weight: 400;
             line-height: 24px;
@@ -81,7 +79,6 @@ const StyledLogin = styled.div`
           }
           > a {
             color: #0ca0f0;
-            font-family: 'Inter';
             font-size: 18px;
             font-weight: 700;
             line-height: 24px;
@@ -150,7 +147,6 @@ const StyledLogin = styled.div`
 
     > a {
       color: ${(props) => props.theme.colors.textBlue};
-      font-family: 'Inter';
       font-size: 16px;
       font-weight: 700;
       line-height: 24px;
@@ -166,7 +162,6 @@ const StyledLogin = styled.div`
 
     > span {
       color: #000;
-      font-family: 'Inter';
       font-size: 15px;
       font-style: normal;
       font-weight: 400;
@@ -175,7 +170,6 @@ const StyledLogin = styled.div`
 
     > a {
       color: ${(props) => props.theme.colors.textBlue};
-      font-family: 'Inter';
       font-size: 15px;
       font-weight: 700;
       letter-spacing: -0.2px;

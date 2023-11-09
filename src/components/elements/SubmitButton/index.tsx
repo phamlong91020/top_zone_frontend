@@ -86,7 +86,6 @@ const StyledSubmitButton = styled(SubmitButtonFormik)<IPropsStyled>`
     > p {
       color: #ffffff;
       text-align: center;
-      font-family: 'Inter';
       font-size: ${({ fontSize }) => fontSize || 20}px;
       font-weight: 400;
       letter-spacing: -0.24px;
@@ -102,7 +101,6 @@ const StyledSubmitButton = styled(SubmitButtonFormik)<IPropsStyled>`
 
     > p {
       text-align: center;
-      font-family: 'Inter';
       font-size: ${({ fontSize }) => fontSize || 20}px;
       font-weight: 400;
       letter-spacing: -0.24px;
@@ -120,7 +118,6 @@ const StyledSubmitButton = styled(SubmitButtonFormik)<IPropsStyled>`
     > p {
       color: #ffffff;
       text-align: center;
-      font-family: 'Inter';
       font-size: ${({ fontSize }) => fontSize || 20}px;
       font-weight: 400;
       letter-spacing: -0.24px;

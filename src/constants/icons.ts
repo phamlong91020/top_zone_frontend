@@ -17,6 +17,7 @@ import SEARCH_WHITE from '@assets/icons/search_white.png';
 import CART_WHITE from '@assets/icons/cart_white.png';
 import ARROW_RIGHT_WHITE from '@assets/icons/arrow_right_white.png';
 import ARROW_LEFT_WHITE from '@assets/icons/arrow_left_white.png';
+import FLAME_ICON from '@assets/icons/flame_icon.webp';
 
 export default {
   MENU_ICON,
@@ -38,4 +39,5 @@ export default {
   CART_WHITE,
   ARROW_RIGHT_WHITE,
   ARROW_LEFT_WHITE,
+  FLAME_ICON,
 };
