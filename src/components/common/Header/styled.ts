@@ -106,7 +106,7 @@ const StyledHeader = styled.div`
             > span {
               font-size: 14px;
               color: #fff;
-              font-family: 'Inter';
+              font-weight: 600;
             }
           }
           @keyframes specialFadeIn {

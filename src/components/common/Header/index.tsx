@@ -119,7 +119,7 @@ const HeaderLayout: FC<Props> = ({ navigate }) => {
             {THUMBNAIL_ARRAY.map((items, i) => (
               <Link to={items.route} key={i}>
                 <div className="header-elements">
-                  <span className="">{items.label}</span>
+                  <span>{items.label}</span>
                 </div>
               </Link>
             ))}

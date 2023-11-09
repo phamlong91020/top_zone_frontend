@@ -2,6 +2,48 @@
   box-sizing: border-box !important;
 }
 
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue_300.otf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue_400.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue_500.otf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue_600.otf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue_700.otf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue_800.otf');
+  font-style: normal;
+  font-weight: 800;
+}
+
 html,
 body {
   text-rendering: optimizeSpeed !important;
@@ -9,6 +51,7 @@ body {
   margin: 0 !important;
   height: 100% !important;
   width: 100% !important;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -50,14 +93,14 @@ a {
   font-size: 15px;
   color: #fff;
   font-weight: 700;
-  font-family: 'Open Sans';
 }
 
 .login-text-below {
-  font-size: 13px;
+  padding-top: 6px;
+  font-size: 14px;
   color: #fff;
-  font-family: 'Open Sans';
-  font-style: italic;
+  font-weight: 500;
+  font-family: 'Helvetica Neue';
 }
 
 .image-style {
@@ -95,6 +138,5 @@ a {
 .thumbnail-text {
   font-size: 15px;
   font-weight: 600;
-  font-family: 'Inter';
   color: #fff;
 }
