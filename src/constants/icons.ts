@@ -18,6 +18,10 @@ import CART_WHITE from '@assets/icons/cart_white.png';
 import ARROW_RIGHT_WHITE from '@assets/icons/arrow_right_white.png';
 import ARROW_LEFT_WHITE from '@assets/icons/arrow_left_white.png';
 import FLAME_ICON from '@assets/icons/flame_icon.webp';
+import SUCCESS_ICON_WHITE from '@assets/icons/success_icon_white.png';
+import WHITE_SHIPPING from '@assets/icons/white_shipping.png';
+import WHITE_SECURE from '@assets/icons/white_secure.png';
+import REFRESH_WHITE_ICON from '@assets/icons/refresh_white_icon.png';
 
 export default {
   MENU_ICON,
@@ -40,4 +44,8 @@ export default {
   ARROW_RIGHT_WHITE,
   ARROW_LEFT_WHITE,
   FLAME_ICON,
+  SUCCESS_ICON_WHITE,
+  WHITE_SHIPPING,
+  WHITE_SECURE,
+  REFRESH_WHITE_ICON,
 };
