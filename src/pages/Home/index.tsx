@@ -10,6 +10,8 @@ import {
   ALL_CATEGORY,
   BANNER_ARRAY,
   FLASH_SALE_ARRAY,
+  POLICY,
+  TEK_ZONE,
   THUMBNAIL_ARRAY,
 } from '@/constants/common';
 import { Link } from 'react-router-dom';
@@ -142,8 +144,8 @@ const Home: FC = () => {
             </Link>
             <div className="items">
               {item.products.map((item, i) => (
-                <Link to="">
-                  <div className="product" key={i}>
+                <Link to="" key={i}>
+                  <div className="product">
                     <img src={item.image} />
                     <h3>{item.label}</h3>
                     <div className="box-price">
@@ -208,6 +210,73 @@ const Home: FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="tekzone-category">
+        {TEK_ZONE.map((item, i) => (
+          <div className="all-category" key={i}>
+            <Link to="">
+              <div className="label">
+                <div className="apple-icon">
+                  <img src={icons.APPLE_WHITE} alt="APPLE_WHITE" />
+                </div>
+                <div className="text">{item.category}</div>
+              </div>
+            </Link>
+            <div className="items">
+              <Swiper
+                spaceBetween={30}
+                slidesPerView={3}
+                breakpoints={{
+                  1200: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                  },
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                grabCursor={true}
+                modules={[Navigation]}
+                cssMode={true}
+                className="mySwiper"
+              >
+                {item.products.map((item, i) => (
+                  <SwiperSlide key={i}>
+                    <Link to="">
+                      <div className="product">
+                        <img src={item.image} />
+                        <h3>{item.title}</h3>
+                        <span>{item.time}</span>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="policy-tablet">
+        {POLICY.map((item, i) => (
+          <div className="policy-children" key={i}>
+            <img src={item.icon} alt="SUCCESS_ICON_WHITE" />
+            <span>{item.label}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="wrapper-policy">
+        <div className="policy-pc">
+          {POLICY.map((item, i) => (
+            <div className="policy-children" key={i}>
+              <img src={item.icon} alt="SUCCESS_ICON_WHITE" />
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </StyledHome>
   );

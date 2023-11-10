@@ -70,6 +70,14 @@ import APPLE_PENCIL_GEN_1 from '@assets/images/apple_pencil_gen_1.webp';
 import AIRTAG from '@assets/images/airtag.webp';
 import APPLE_TV_4K_64GB from '@assets/images/apple_tv_4k_64gb.webp';
 import WIRELESS_CHARGING from '@assets/images/wireless_charging.webp';
+import TEKZONE_01 from '@assets/images/tekzone_01.jpg';
+import TEKZONE_02 from '@assets/images/tekzone_02.jpg';
+import TEKZONE_03 from '@assets/images/tekzone_03.jpg';
+import TEKZONE_04 from '@assets/images/tekzone_04.jpg';
+import TEKZONE_05 from '@assets/images/tekzone_05.jpg';
+import TEKZONE_06 from '@assets/images/tekzone_06.jpg';
+import TEKZONE_07 from '@assets/images/tekzone_07.jpg';
+import TEKZONE_08 from '@assets/images/tekzone_08.jpg';
 
 export default {
   TOP_ZONE_LOGO,
@@ -144,4 +152,12 @@ export default {
   AIRTAG,
   APPLE_TV_4K_64GB,
   WIRELESS_CHARGING,
+  TEKZONE_01,
+  TEKZONE_02,
+  TEKZONE_03,
+  TEKZONE_04,
+  TEKZONE_05,
+  TEKZONE_06,
+  TEKZONE_07,
+  TEKZONE_08,
 };

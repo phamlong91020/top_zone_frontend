@@ -522,3 +522,72 @@ export const ALL_CATEGORY = [
     ],
   },
 ];
+
+export const TEK_ZONE = [
+  {
+    key: 'iphone',
+    category: 'Tekzone',
+    products: [
+      {
+        title:
+          'Cách ghép 2 video thành 1 trên CapCut siêu đơn giản, giúp bạn có thể tạo ra những video, vlog hấp dẫn',
+        image: images.TEKZONE_01,
+        link: 'https://www.topzone.vn/tekzone/cach-ghep-2-video-thanh-1-tren-capcut-1554563',
+        time: '2 giờ trước',
+      },
+      {
+        title:
+          'Flashsale 11/11 tại TopZone: Giảm đến 20% iPhone, Apple Watch, AirPods và MacBook',
+        image: images.TEKZONE_02,
+        link: 'https://www.topzone.vn/tekzone/flashsale-11-11-tai-topzone-1554217',
+        time: '23 giờ trước',
+      },
+      {
+        title:
+          'iPhone 15 Series giảm đến 2 triệu đồng tại TopZone, ưu đãi cao chót vót mà bạn không thể bỏ lỡ',
+        image: images.TEKZONE_03,
+        link: 'https://www.topzone.vn/tekzone/iphone-15-series-giam-den-2-trieu-1554372',
+        time: '1 ngày trước',
+      },
+      {
+        title:
+          'iPhone giá chỉ từ 10.49 triệu tại TopZone, cơ hội vàng dành cho bạn để lên đời iPhone mới giá hời',
+        image: images.TEKZONE_04,
+        link: 'https://www.topzone.vn/tekzone/iphone-gia-chi-tu-10-49-trieu-1554371',
+        time: '2 ngày trước',
+      },
+      {
+        title: 'iPhone 15 Pro Max màu titan cực sang, giảm cực nhiều đến 800k',
+        image: images.TEKZONE_05,
+        link: 'https://www.topzone.vn/tekzone/iphone-15-pro-max-mau-titan-cuc-sang-1554544',
+        time: '2 ngày trước',
+      },
+      {
+        title:
+          'Khuyến mãi Apple Watch tháng 11: Sở hữu đồng hồ thông minh đến từ Apple với giá cả siêu ưu đãi',
+        image: images.TEKZONE_06,
+        link: 'https://www.topzone.vn/tekzone/khuyen-mai-apple-watch-thang-11-1553977',
+        time: '5 ngày trước',
+      },
+    ],
+  },
+];
+
+export const POLICY = [
+  {
+    label: 'Mẫu mã đa dạng',
+    icon: icons.SUCCESS_ICON_WHITE,
+  },
+  {
+    label: 'Giao hàng toàn quốc',
+    icon: icons.WHITE_SHIPPING,
+  },
+  {
+    label: 'Bảo hành 12 tháng',
+    icon: icons.WHITE_SECURE,
+  },
+  {
+    label: 'Đổi trả linh hoạt',
+    icon: icons.REFRESH_WHITE_ICON,
+  },
+];
