@@ -22,6 +22,8 @@ import SUCCESS_ICON_WHITE from '@assets/icons/success_icon_white.png';
 import WHITE_SHIPPING from '@assets/icons/white_shipping.png';
 import WHITE_SECURE from '@assets/icons/white_secure.png';
 import REFRESH_WHITE_ICON from '@assets/icons/refresh_white_icon.png';
+import FACEBOOK_ICON from '@assets/icons/facebook_icon.png';
+import APPLE_PAY_ICON from '@assets/icons/apple_pay.webp';
 
 export default {
   MENU_ICON,
@@ -48,4 +50,6 @@ export default {
   WHITE_SHIPPING,
   WHITE_SECURE,
   REFRESH_WHITE_ICON,
+  FACEBOOK_ICON,
+  APPLE_PAY_ICON,
 };

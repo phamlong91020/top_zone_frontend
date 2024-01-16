@@ -17,6 +17,8 @@ import {
 import { Link } from 'react-router-dom';
 import images from '@/constants/images';
 import icons from '@/constants/icons';
+import { Select } from 'antd';
+import { RightOutlined } from '@ant-design/icons';
 
 const Home: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -257,6 +259,95 @@ const Home: FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="intro-topzone">
+        <div className="video-topzone">
+          <div className="wrapper-video">
+            <video controls muted loop playsInline>
+              <source
+                src="https://cdn.tgdd.vn/mwgcart/topzone/video/Gt-Topzone.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div className="gradient-bg"></div>
+
+            <img src={icons.TOP_ZONE} alt="TOP_ZONE" />
+          </div>
+        </div>
+        <p>
+          Tại TopZone, khách hàng yêu mến hệ sinh thái Apple sẽ tìm thấy đầy đủ
+          và đa dạng nhất các sản phẩm như iPhone, iPad, Apple Watch, MacBook và
+          các phụ kiện Apple... với không gian mua sắm đẳng cấp, hiện đại.
+        </p>
+        <a href="https://www.topzone.vn/gioi-thieu" target="_blank">
+          Đọc thêm
+        </a>
+      </div>
+
+      <div className="list-store">
+        <div className="center-page">
+          <div className="store-province">
+            <span>Có 3 cửa hàng TopZone tại</span>
+            <Select
+              showSearch
+              placeholder="Select a person"
+              options={[
+                {
+                  label: 'Jack',
+                  value: 'jack',
+                },
+                {
+                  label: 'Lucy',
+                  value: 'lucy',
+                },
+                {
+                  label: 'Tom',
+                  value: 'tom',
+                },
+              ]}
+            />
+          </div>
+
+          <div className="store-list">
+            <div className="store-children">
+              <div className="store-name">
+                <span>Topzone Xuân Mai</span>
+                <Link to="">
+                  <span>Xem chỉ đường</span>
+                  <RightOutlined />
+                </Link>
+              </div>
+              <div className="address-store">
+                Số 34, tổ 2, Khu Xuân Hà, Thị Trấn Xuân Mai, Huyện Chương Mỹ,
+                Thành phố Hà Nội, Việt Nam
+              </div>
+              <div className="payment">
+                <img src={icons.APPLE_PAY_ICON} alt="APPLE_PAY_ICON" />
+                <span>Hỗ trợ thanh toán qua Apple Pay</span>
+              </div>
+            </div>
+
+            <div className="store-children">
+              <div className="store-name">
+                <span>Topzone Xuân Mai</span>
+                <Link to="">
+                  <span>Xem chỉ đường</span>
+                  <RightOutlined />
+                </Link>
+              </div>
+              <div className="address-store">
+                Số 34, tổ 2, Khu Xuân Hà, Thị Trấn Xuân Mai, Huyện Chương Mỹ,
+                Thành phố Hà Nội, Việt Nam
+              </div>
+              <div className="payment">
+                <img src={icons.APPLE_PAY_ICON} alt="APPLE_PAY_ICON" />
+                <span>Hỗ trợ thanh toán qua Apple Pay</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="policy-tablet">

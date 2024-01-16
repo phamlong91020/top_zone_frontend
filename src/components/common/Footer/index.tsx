@@ -7,28 +7,16 @@ const FooterLayout: FC<Props> = () => {
   return (
     <StyledFooter>
       <div className="footer">
-        <div className="wrapper-banner">
-          <div className="topzone-logo">
-            <img src={icons.TOP_ZONE} alt="TOP_ZONE" />
+        <div className="hotline">
+          <span>Tổng đài</span>
+          <span>Mua hàng: 1900.9696.42(7:30 - 22:00)</span>
+          <span>CSKH: 1900.9868.43(8:00 - 21:30)</span>
+          <div>
+            <span></span>
+            <div>
+              <img src={icons.FACEBOOK_ICON} alt="FACEBOOK_ICON" />
+            </div>
           </div>
-          <div className="apple-reseller">
-            <img
-              src={icons.APPLE_PREMIUM_RESELLER}
-              alt="APPLE_PREMIUM_RESELLER"
-            />
-          </div>
-        </div>
-
-        <div className="footer-content">
-          <div className="hotline"></div>
-
-          <div className="stores"></div>
-
-          <div className="support"></div>
-
-          <div className="topzone-brand"></div>
-
-          <div className="warranty"></div>
         </div>
       </div>
     </StyledFooter>
@@ -40,3 +28,9 @@ const Footer: FC<ReceivedProps> = (props) => (
 );
 
 export default Footer;
+
+export const CONNECT_US = [
+  {
+    icon: icons,
+  },
+];
