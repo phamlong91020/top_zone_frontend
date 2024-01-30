@@ -133,7 +133,7 @@ const Home: FC = () => {
         ))}
       </div>
 
-      <div className="category">
+      <div className="mobile-category">
         {ALL_CATEGORY.map((item, i) => (
           <div className="all-category" key={i}>
             <Link to="">
@@ -264,15 +264,13 @@ const Home: FC = () => {
       <div className="intro-topzone">
         <div className="video-topzone">
           <div className="wrapper-video">
-            <video controls muted loop playsInline>
+            <video controls muted loop playsInline autoPlay>
               <source
                 src="https://cdn.tgdd.vn/mwgcart/topzone/video/Gt-Topzone.mp4"
                 type="video/mp4"
               />
             </video>
-
             <div className="gradient-bg"></div>
-
             <img src={icons.TOP_ZONE} alt="TOP_ZONE" />
           </div>
         </div>

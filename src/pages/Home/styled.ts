@@ -289,7 +289,7 @@ const StyledHome = styled.div`
     }
   }
 
-  > .category {
+  > .mobile-category {
     @media screen and (min-width: 1201px) {
       display: none;
     }
