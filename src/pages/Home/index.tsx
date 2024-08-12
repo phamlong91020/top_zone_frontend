@@ -21,7 +21,7 @@ import { Select } from 'antd';
 import { RightOutlined } from '@ant-design/icons';
 
 const Home: FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
     <StyledHome>
