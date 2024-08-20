@@ -1,10 +1,10 @@
 import { FC } from 'react';
+import { styled } from 'styled-components';
 import { Outlet } from 'react-router-dom';
 import Header from '../Header';
-import { styled } from 'styled-components';
-import Footer from '../Footer';
+import { Footer } from '../Footer';
 
-const Layout: FC = () => {
+export const Layout: FC = () => {
   return (
     <StyledMainLayout>
       <Header />
@@ -14,10 +14,7 @@ const Layout: FC = () => {
   );
 };
 
-export default Layout;
-
 const StyledMainLayout = styled.div`
   min-height: 100vh;
   background: #3e3e3f;
-  /* position: relative; */
 `;

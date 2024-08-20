@@ -1,9 +1,8 @@
 import { FC } from 'react';
-import useFooterHook, { Props, ReceivedProps } from './hook';
 import StyledFooter from './styled';
 import icons from '@/constants/icons';
 
-const FooterLayout: FC<Props> = () => {
+export const Footer: FC = () => {
   return (
     <StyledFooter>
       <div className="footer">
@@ -22,15 +21,3 @@ const FooterLayout: FC<Props> = () => {
     </StyledFooter>
   );
 };
-
-const Footer: FC<ReceivedProps> = (props) => (
-  <FooterLayout {...useFooterHook(props)} />
-);
-
-export default Footer;
-
-export const CONNECT_US = [
-  {
-    icon: icons,
-  },
-];
