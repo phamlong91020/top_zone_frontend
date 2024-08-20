@@ -5,15 +5,13 @@ import styled from 'styled-components';
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-const Loading: React.FC = () => {
+export const Loading: React.FC = () => {
   return (
     <StyledLoading>
       <Spin indicator={antIcon} />
     </StyledLoading>
   );
 };
-
-export default Loading;
 
 export const StyledLoading = styled.div`
   position: absolute;
