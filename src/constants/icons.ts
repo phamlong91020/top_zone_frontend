@@ -25,7 +25,7 @@ import REFRESH_WHITE_ICON from '@assets/icons/refresh_white_icon.png';
 import FACEBOOK_ICON from '@assets/icons/facebook_icon.png';
 import APPLE_PAY_ICON from '@assets/icons/apple_pay.webp';
 
-export default {
+export const icons = {
   MENU_ICON,
   CART_GRADIENT,
   TOP_ZONE,

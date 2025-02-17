@@ -1,28 +1,20 @@
-import { FC, useState } from 'react';
-import StyledHome from './styled';
+import { FC } from 'react';
+import { StyledHome } from '../styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import cn from 'classnames';
 import {
   ALL_CATEGORY,
   BANNER_ARRAY,
-  FLASH_SALE_ARRAY,
   POLICY,
   TEK_ZONE,
-  THUMBNAIL_ARRAY,
 } from '@/constants/common';
 import { Link } from 'react-router-dom';
-import images from '@/constants/images';
-import icons from '@/constants/icons';
-import { Select } from 'antd';
-import { RightOutlined } from '@ant-design/icons';
+import { icons } from '@/constants/icons';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-const Home: FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-
+export const Home: FC = () => {
   return (
     <StyledHome>
       <Swiper
@@ -43,7 +35,7 @@ const Home: FC = () => {
         ))}
       </Swiper>
 
-      <div className="flash-sale">
+      {/* <div className="flash-sale">
         <div className="time">
           <div className="banner">
             <img src={images.FLASH_SALE} alt="FLASH_SALE" />
@@ -120,9 +112,9 @@ const Home: FC = () => {
             ))}
           </Swiper>
         </div>
-      </div>
+      </div> */}
 
-      <div className="thumbnail">
+      {/* <div className="thumbnail">
         {THUMBNAIL_ARRAY.slice(0, -2).map((item, i) => (
           <Link to={item.route} key={i}>
             <div className="item">
@@ -131,7 +123,7 @@ const Home: FC = () => {
             </div>
           </Link>
         ))}
-      </div>
+      </div> */}
 
       <div className="mobile-category">
         {ALL_CATEGORY.map((item, i) => (
@@ -261,7 +253,7 @@ const Home: FC = () => {
         ))}
       </div>
 
-      <div className="intro-topzone">
+      {/* <div className="intro-topzone">
         <div className="video-topzone">
           <div className="wrapper-video">
             <video controls muted loop playsInline autoPlay>
@@ -282,9 +274,9 @@ const Home: FC = () => {
         <a href="https://www.topzone.vn/gioi-thieu" target="_blank">
           Đọc thêm
         </a>
-      </div>
+      </div> */}
 
-      <div className="list-store">
+      {/* <div className="list-store">
         <div className="center-page">
           <div className="store-province">
             <span>Có 3 cửa hàng TopZone tại</span>
@@ -314,7 +306,6 @@ const Home: FC = () => {
                 <span>Topzone Xuân Mai</span>
                 <Link to="">
                   <span>Xem chỉ đường</span>
-                  <RightOutlined />
                 </Link>
               </div>
               <div className="address-store">
@@ -332,7 +323,6 @@ const Home: FC = () => {
                 <span>Topzone Xuân Mai</span>
                 <Link to="">
                   <span>Xem chỉ đường</span>
-                  <RightOutlined />
                 </Link>
               </div>
               <div className="address-store">
@@ -346,7 +336,7 @@ const Home: FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="policy-tablet">
         {POLICY.map((item, i) => (
@@ -370,5 +360,3 @@ const Home: FC = () => {
     </StyledHome>
   );
 };
-
-export default Home;

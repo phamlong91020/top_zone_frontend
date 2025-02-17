@@ -78,7 +78,7 @@ import TEKZONE_06 from '@assets/images/tekzone_06.jpg';
 import TEKZONE_07 from '@assets/images/tekzone_07.jpg';
 import TEKZONE_08 from '@assets/images/tekzone_08.jpg';
 
-export default {
+export const images = {
   TOP_ZONE_LOGO,
   TOP_ZONE_BACKGROUND,
   IMAGE_PROFILE,

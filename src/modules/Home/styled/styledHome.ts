@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
-import icons from '@/constants/icons';
+import { icons } from '@/constants';
 
-const StyledHome = styled.div`
+export const StyledHome = styled.div`
   .my-swiper {
     .banner-img {
       width: 100%;
@@ -838,5 +838,3 @@ const StyledHome = styled.div`
     }
   }
 `;
-
-export default StyledHome;

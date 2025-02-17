@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import StyledFooter from './styled';
-import icons from '@/constants/icons';
+import { icons } from '@/constants';
+import styled from 'styled-components';
 
-export const Footer: FC = () => {
+export const AppFooter: FC = () => {
   return (
     <StyledFooter>
       <div className="footer">
@@ -21,3 +21,22 @@ export const Footer: FC = () => {
     </StyledFooter>
   );
 };
+
+const StyledFooter = styled.div`
+  background: #000;
+  > .footer {
+    display: flex;
+    justify-content: space-between;
+    > .hotline {
+      display: flex;
+      flex-direction: column;
+      > span {
+        color: #fff;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 0 0 8px;
+        font-weight: 500;
+      }
+    }
+  }
+`;
