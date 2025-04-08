@@ -24,6 +24,7 @@ import WHITE_SECURE from '@assets/icons/white_secure.png';
 import REFRESH_WHITE_ICON from '@assets/icons/refresh_white_icon.png';
 import FACEBOOK_ICON from '@assets/icons/facebook_icon.png';
 import APPLE_PAY_ICON from '@assets/icons/apple_pay.webp';
+import WHITE_PREMIUM_RESELLER from '@assets/icons/white_premium_reseller.webp';
 
 export const icons = {
   MENU_ICON,
@@ -52,4 +53,5 @@ export const icons = {
   REFRESH_WHITE_ICON,
   FACEBOOK_ICON,
   APPLE_PAY_ICON,
+  WHITE_PREMIUM_RESELLER,
 };

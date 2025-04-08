@@ -1,11 +1,11 @@
 import { FC, useState } from 'react';
 import { icons } from '@/constants';
 import { Link, useNavigate } from 'react-router-dom';
-import { ROUTE } from '@/constants/route';
 import { Drawer } from 'antd';
 import { images } from '@/constants';
 import { THUMBNAIL_ARRAY } from '@/constants/common';
 import styled from 'styled-components';
+import { EBreakPoint, ERoute } from '@/enums';
 
 export const AppHeader: FC = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -28,7 +28,7 @@ export const AppHeader: FC = () => {
       <div className="header-mobile">
         <div className="header-above">
           <div className="menu-icon" onClick={showDrawer}>
-            <Link to={ROUTE.HOME}>
+            <Link to={ERoute.HOME}>
               <img src={icons.MENU_ICON} alt="MENU_ICON" />
             </Link>
           </div>
@@ -64,7 +64,7 @@ export const AppHeader: FC = () => {
               </div>
 
               <div className="login-content">
-                <Link to={ROUTE.LOGIN}>
+                <Link to={ERoute.LOGIN}>
                   <span className="login-text-above">Đăng nhập</span>
                 </Link>
                 <span className="login-text-below">
@@ -146,7 +146,7 @@ const StyledHeader = styled.div`
     width: 100%;
     background: #000;
     height: 60px;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${EBreakPoint.LAPTOP}) {
       display: none;
     }
 
@@ -203,7 +203,7 @@ const StyledHeader = styled.div`
     width: 100%;
     background: #000;
     height: 60px;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${EBreakPoint.LAPTOP}) {
       display: block;
     }
 

@@ -2,14 +2,9 @@ import { FC } from 'react';
 import { StyledHome } from '../styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
-import {
-  ALL_CATEGORY,
-  BANNER_ARRAY,
-  POLICY,
-  TEK_ZONE,
-} from '@/constants/common';
+import { ALL_CATEGORY, BANNER_ARRAY } from '@/constants';
 import { Link } from 'react-router-dom';
-import { icons } from '@/constants/icons';
+import { icons } from '@/constants';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -206,7 +201,7 @@ export const Home: FC = () => {
         ))}
       </div>
 
-      <div className="tekzone-category">
+      {/* <div className="tekzone-category">
         {TEK_ZONE.map((item, i) => (
           <div className="all-category" key={i}>
             <Link to="">
@@ -251,7 +246,7 @@ export const Home: FC = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* <div className="intro-topzone">
         <div className="video-topzone">
@@ -338,7 +333,7 @@ export const Home: FC = () => {
         </div>
       </div> */}
 
-      <div className="policy-tablet">
+      {/* <div className="policy-tablet">
         {POLICY.map((item, i) => (
           <div className="policy-children" key={i}>
             <img src={item.icon} alt="SUCCESS_ICON_WHITE" />
@@ -355,8 +350,8 @@ export const Home: FC = () => {
               <span>{item.label}</span>
             </div>
           ))}
-        </div>
-      </div>
+        </div> 
+      {/* </div> */}
     </StyledHome>
   );
 };

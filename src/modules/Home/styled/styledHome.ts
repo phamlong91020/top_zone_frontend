@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import { icons } from '@/constants';
+import { EBreakPoint } from '@/enums';
 
 export const StyledHome = styled.div`
   .my-swiper {
@@ -28,7 +29,7 @@ export const StyledHome = styled.div`
 
   > .flash-sale {
     display: none;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${EBreakPoint.LAPTOP}) {
       display: block;
       background: #161616;
       max-width: 1200px;
@@ -237,25 +238,25 @@ export const StyledHome = styled.div`
 
   > .thumbnail {
     margin: 50px auto 40px;
-    @media screen and (min-width: 0) and (max-width: 1200px) {
+    @media screen and (min-width: 0) and (max-width: ${EBreakPoint.SMALL_DESKTOP}) {
       display: grid;
       justify-items: center;
       align-items: center;
       gap: 30px;
     }
-    @media screen and (min-width: 0) and (max-width: 425px) {
+    @media screen and (min-width: 0) and (max-width: ${EBreakPoint.LARGE_MOBILE}) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       grid-template-rows: repeat(1, minmax(0, 1fr));
     }
-    @media screen and (min-width: 426px) and (max-width: 525px) {
+    @media screen and (min-width: ${EBreakPoint.LARGE_MOBILE}) and (max-width: ${EBreakPoint.EXTRA_MOBILE}) {
       grid-template-columns: repeat(2, minmax(0, 2fr));
       grid-template-rows: repeat(2, minmax(0, 2fr));
     }
-    @media screen and (min-width: 526px) and (max-width: 1200px) {
+    @media screen and (min-width: ${EBreakPoint.EXTRA_MOBILE}) and (max-width: ${EBreakPoint.SMALL_DESKTOP}) {
       grid-template-columns: repeat(3, minmax(0, 3fr));
       grid-template-rows: repeat(2, minmax(0, 2fr));
     }
-    @media screen and (min-width: 1201px) {
+    @media screen and (min-width: ${EBreakPoint.SMALL_DESKTOP}) {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -290,7 +291,7 @@ export const StyledHome = styled.div`
   }
 
   > .mobile-category {
-    @media screen and (min-width: 1201px) {
+    @media screen and (min-width: ${EBreakPoint.SMALL_DESKTOP}) {
       display: none;
     }
     > .all-category {
@@ -317,7 +318,7 @@ export const StyledHome = styled.div`
       }
       > .items {
         padding: 20px 30px;
-        @media screen and (min-width: 0) and (max-width: 1200px) {
+        @media screen and (min-width: 0) and (max-width: ${EBreakPoint.SMALL_DESKTOP}) {
           display: grid;
           justify-items: center;
           align-items: center;
@@ -331,7 +332,7 @@ export const StyledHome = styled.div`
           grid-template-columns: repeat(2, minmax(0, 2fr));
           grid-template-rows: repeat(2, minmax(0, 2fr));
         }
-        @media screen and (min-width: 931px) and (max-width: 1200px) {
+        @media screen and (min-width: 931px) and (max-width: ${EBreakPoint.SMALL_DESKTOP}) {
           grid-template-columns: repeat(3, minmax(0, 3fr));
           grid-template-rows: repeat(3, minmax(0, 3fr));
         }
@@ -386,7 +387,7 @@ export const StyledHome = styled.div`
 
   > .swiper-category {
     display: none;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: ${EBreakPoint.SMALL_DESKTOP}) {
       display: block;
       > .all-category {
         margin-bottom: 80px;
@@ -474,7 +475,7 @@ export const StyledHome = styled.div`
 
   > .tekzone-category {
     display: none;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: ${EBreakPoint.SMALL_DESKTOP}) {
       display: block;
       > .all-category {
         margin-bottom: 80px;
@@ -724,25 +725,25 @@ export const StyledHome = styled.div`
     background: #3e3e3f;
     padding: 25px 40px;
     margin-bottom: 50px;
-    @media screen and (min-width: 0) and (max-width: 1023px) {
+    @media screen and (min-width: 0) and (max-width: ${EBreakPoint.LAPTOP}) {
       display: grid;
       justify-items: center;
       align-items: center;
       gap: 30px;
     }
-    @media screen and (min-width: 0) and (max-width: 525px) {
+    @media screen and (min-width: 0) and (max-width: ${EBreakPoint.EXTRA_MOBILE}) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
       grid-template-rows: repeat(1, minmax(0, 1fr));
     }
-    @media screen and (min-width: 525px) and (max-width: 768px) {
+    @media screen and (min-width: ${EBreakPoint.EXTRA_MOBILE}) and (max-width: ${EBreakPoint.TABLET}) {
       grid-template-columns: repeat(2, minmax(0, 2fr));
       grid-template-rows: repeat(2, minmax(0, 2fr));
     }
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @media screen and (min-width: ${EBreakPoint.TABLET}) and (max-width: ${EBreakPoint.TABLET}) {
       grid-template-columns: repeat(4, minmax(0, 4fr));
       grid-template-rows: repeat(1, minmax(0, 1fr));
     }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${EBreakPoint.LAPTOP}) {
       display: none;
     }
     > .policy-children {
@@ -767,7 +768,7 @@ export const StyledHome = styled.div`
 
   > .wrapper-policy {
     display: none;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${EBreakPoint.LAPTOP}) {
       display: block;
       width: 100%;
       background: #3e3e3f;
@@ -804,7 +805,7 @@ export const StyledHome = styled.div`
 
   .swiper-button-prev {
     display: none;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${EBreakPoint.LAPTOP}) {
       display: block;
       left: 3%;
       width: 50px;
@@ -822,7 +823,7 @@ export const StyledHome = styled.div`
   }
   .swiper-button-next {
     display: none;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${EBreakPoint.LAPTOP}) {
       right: 3%;
       width: 50px;
       height: 50px;
