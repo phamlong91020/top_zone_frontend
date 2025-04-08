@@ -5,6 +5,10 @@ import { lazyImport } from './utils';
 import { ERoute } from './enums';
 
 const { Home } = lazyImport(() => import('@/modules'), 'Home');
+const { ProductDetails } = lazyImport(
+  () => import('@/modules'),
+  'ProductDetails'
+);
 
 export const AppRouter: FC = () => {
   return (
@@ -12,6 +16,7 @@ export const AppRouter: FC = () => {
       <Routes>
         <Route path={ERoute.HOME} element={<AppLayout />}>
           <Route index element={<Home />} />
+          <Route path={ERoute.PRODUCT_DETAILS} element={<ProductDetails />} />
         </Route>
       </Routes>
     </Suspense>
