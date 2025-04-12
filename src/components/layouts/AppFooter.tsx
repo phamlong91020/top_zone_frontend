@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Colors, icons } from '@/constants';
 import styled from 'styled-components';
-import { AppImage } from '../image';
+import { AppImage } from '../common/image';
 
 export const AppFooter: FC = () => {
   return (

@@ -9,6 +9,7 @@ export enum ETextCursor {
   POINTER = 'pointer',
   DEFAULT = 'default',
   NOT_ALLOWED = 'not-allowed',
+  UNSET = 'unset',
 }
 
 export enum EBreakPoint {
@@ -21,4 +22,9 @@ export enum EBreakPoint {
   SMALL_DESKTOP = '1200px',
   MEDIUM_DESKTOP = '1440px',
   LARGE_DESKTOP = '1600px',
+}
+
+export enum ETypeButton {
+  BUTTON = 'button',
+  SUBMIT = 'submit',
 }
