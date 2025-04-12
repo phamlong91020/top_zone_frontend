@@ -591,3 +591,34 @@ export const POLICY = [
     icon: icons.REFRESH_WHITE_ICON,
   },
 ];
+
+export const LIST_PROMOTIONS_PRODUCT_DETAILS = [
+  {
+    id: 1,
+    text: 'Phiếu mua hàng AirPods, Apple Watch, Macbook trị giá 500,000đ',
+  },
+  {
+    id: 2,
+    text: 'Tặng ly giữ nhiệt Topzone đen',
+  },
+  {
+    id: 3,
+    text: 'Phiếu mua hàng Phụ kiện (trừ Samsung, Oppo, Xiaomi, Apple) và đồng hồ thông minh (trừ Apple) trị giá 100.000đ',
+  },
+];
+
+export const LIST_CHECKOUT_INFO = [
+  {
+    id: 1,
+    text: 'Giao hàng nhanh chóng (tuỳ khu vực)',
+  },
+  {
+    id: 2,
+    text: 'Mỗi số điện thoại chỉ mua 3 sản phẩm trong 1 tháng',
+  },
+
+  {
+    id: 3,
+    text: 'Giá và khuyến mãi có thể kết thúc sớm',
+  },
+];
