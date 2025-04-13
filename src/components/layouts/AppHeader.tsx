@@ -24,7 +24,7 @@ export const AppHeader: FC = () => {
   };
 
   return (
-    <StyledHeader>
+    <StyledHeader className="app-header">
       <div className="header-mobile">
         <div className="header-above">
           <div className="menu-icon" onClick={showDrawer}>

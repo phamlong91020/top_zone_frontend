@@ -1,15 +1,16 @@
 * {
-  box-sizing: border-box !important;
+  box-sizing: border-box;
 }
 
 html,
 body {
-  text-rendering: optimizeSpeed !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  height: 100% !important;
-  width: 100% !important;
-  font-family: 'Helvetica Neue', sans-serif;
+  text-rendering: optimizeSpeed;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #3e3e3f;
 }
 
 a {
