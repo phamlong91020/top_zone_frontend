@@ -5,4 +5,6 @@ export interface ICustomerCartForm {
   district: string;
   ward: string;
   streetAddress: string;
+  paymentMethod: string;
+  cardNumber: string;
 }

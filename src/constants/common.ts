@@ -1,3 +1,4 @@
+import { EPaymentMethod } from '@/enums';
 import { icons } from './icons';
 import { images } from './images';
 
@@ -620,5 +621,13 @@ export const LIST_CHECKOUT_INFO = [
   {
     id: 3,
     text: 'Giá và khuyến mãi có thể kết thúc sớm',
+  },
+];
+
+export const PAYMENT_METHOD = [
+  { label: 'Thanh toán tiền mặt khi nhận hàng', value: EPaymentMethod.CASH },
+  {
+    label: 'Qua thẻ quốc tế Visa, Master, JCB',
+    value: EPaymentMethod.CREDIT_CART,
   },
 ];

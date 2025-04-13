@@ -1,5 +1,5 @@
 {
-  "name": "hoang_ha_frontend",
+  "name": "top_zone",
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
@@ -16,11 +16,8 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.3",
     "@hookform/resolvers": "^5.0.1",
-    "antd": "^5.8.0",
+    "antd": "^5.24.6",
     "axios": "^1.6.0",
-    "classnames": "^2.3.2",
-    "formik": "^2.4.2",
-    "formik-antd": "^2.0.4",
     "lucide-react": "^0.487.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
@@ -31,7 +28,6 @@
     "redux-persist": "^6.0.0",
     "styled-components": "^6.0.7",
     "swiper": "^11.0.3",
-    "uuid": "^10.0.0",
     "yup": "^1.2.0"
   },
   "devDependencies": {

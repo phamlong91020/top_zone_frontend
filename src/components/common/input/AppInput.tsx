@@ -196,7 +196,7 @@ const StyledAppInput = styled.div<IStyledProps>`
 
   .ant-input-status-error {
     background-color: ${({ $backgroundColor }) =>
-      $backgroundColor ? $backgroundColor : Colors.black_20} !important;
+      $backgroundColor ? $backgroundColor : Colors.white_10} !important;
     border-color: ${Colors.red_20} !important;
   }
 

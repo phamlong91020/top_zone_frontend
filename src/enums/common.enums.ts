@@ -35,3 +35,9 @@ export enum EInputAntdError {
   WARNING = 'warning',
   NONE = '',
 }
+
+export enum EWordBreak {
+  BREAK_WORDS = 'break-word',
+  BREAK_ALL = 'break-all',
+  BREAK_KEEP = 'keep-all',
+}
