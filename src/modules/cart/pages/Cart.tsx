@@ -7,15 +7,22 @@ import {
   AppIcon,
   AppImage,
   AppInput,
+  AppRadioGroup,
   AppText,
 } from '@/components';
-import { Colors, LIST_PROMOTIONS_PRODUCT_DETAILS, icons } from '@/constants';
+import {
+  Colors,
+  LIST_PROMOTIONS_PRODUCT_DETAILS,
+  PAYMENT_METHOD,
+  icons,
+} from '@/constants';
 import { Controller } from 'react-hook-form';
 import { useCartHooks } from '../hooks';
 import { Minus, Plus } from 'lucide-react';
+import { EPaymentMethod } from '@/enums';
 
 export const Cart: FC = () => {
-  const { control, errors } = useCartHooks();
+  const { control, errors, watchValues, handleCheckout } = useCartHooks();
 
   return (
     <StyledCart className="cart">
@@ -318,6 +325,62 @@ export const Cart: FC = () => {
           </div>
         </div>
 
+        <div className="payment-method">
+          <AppText
+            text="Phương thức thanh toán"
+            fontSize={15}
+            fontWeight={600}
+            color={Colors.black_80}
+            marginBottom={12}
+          />
+
+          <Controller
+            name="paymentMethod"
+            control={control}
+            render={({ field }) => (
+              <AppRadioGroup
+                {...field}
+                required={true}
+                options={PAYMENT_METHOD}
+                onChange={(e) => {
+                  field.onChange(e.target.value);
+                }}
+                letterSpacingText={0.15}
+                flexDirection="column"
+                gapRadioList={4}
+                errors={errors?.paymentMethod?.message}
+                fieldMarginBottom={8}
+              />
+            )}
+          />
+
+          {watchValues.paymentMethod === EPaymentMethod.CREDIT_CART && (
+            <Controller
+              name="cardNumber"
+              control={control}
+              render={({ field }) => (
+                <AppInput
+                  {...field}
+                  required={true}
+                  placeholder="Số thẻ"
+                  onChange={(e) => {
+                    field.onChange(e.target.value);
+                  }}
+                  onBlur={(e) => {
+                    field.onBlur();
+                    field.onChange(e.target.value.trim());
+                  }}
+                  errors={errors?.name?.message}
+                  width={260}
+                  height={32}
+                  fieldMarginBottom={0}
+                  maxLength={16}
+                />
+              )}
+            />
+          )}
+        </div>
+
         <div className="total-amount">
           <div className="total">
             <AppText
@@ -339,6 +402,7 @@ export const Cart: FC = () => {
             fontWeight={700}
             backgroundColor={Colors.blue_140}
             borderRadius={12}
+            onClick={handleCheckout}
           />
         </div>
       </div>

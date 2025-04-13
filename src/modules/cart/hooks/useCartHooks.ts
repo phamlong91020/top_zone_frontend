@@ -3,6 +3,7 @@ import { useForm, Resolver } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ICustomerCartForm } from '@/interfaces';
 import { customerCartFormValidationSchema } from '@/validations';
+import { EPaymentMethod } from '@/enums';
 
 export const useCartHooks = () => {
   const defaultValues = {
@@ -12,6 +13,8 @@ export const useCartHooks = () => {
     district: '',
     ward: '',
     streetAddress: '',
+    paymentMethod: EPaymentMethod.CASH,
+    cardNumber: '',
   };
 
   const {
@@ -28,8 +31,14 @@ export const useCartHooks = () => {
     ) as Resolver<ICustomerCartForm>,
   });
 
+  const watchValues = watch();
+
+  const handleCheckout = handleSubmit((values) => {});
+
   return {
     control,
     errors,
+    watchValues,
+    handleCheckout,
   };
 };

@@ -30,4 +30,11 @@ export const customerCartFormValidationSchema = Yup.object().shape({
     .required('Vui lòng nhập số nhà hoặc tên đường')
     .min(6, 'Số nhà hoặc tên đường thoại phải có ít nhất 6 kí tự')
     .max(100, 'Số nhà hoặc tên đường chỉ có thể tối đa là 100 kí tự'),
+
+  paymentMethod: Yup.string().required('Phương thức thanh toán là bắt buộc'),
+
+  cardNumber: Yup.string()
+    .required('Số thẻ là bắt buộc')
+    .min(16, 'Số thẻ phải có ít nhất 6 kí tự')
+    .max(16, 'Số thẻ chỉ có thể tối đa là 16 kí tự'),
 });
