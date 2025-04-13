@@ -7,6 +7,7 @@ export const Colors = {
   black_50: '#1A1A1AE6',
   black_60: '#1c1c1d',
   black_70: '#2f3033',
+  black_80: '#323232',
 
   // Gray
   gray_10: '#b2b8c1',
@@ -33,6 +34,10 @@ export const Colors = {
   gray_230: '#2f3033',
   gray_240: '#C2BCB2',
   gray_250: '#414141',
+  gray_260: '#fafafb',
+  gray_270: '#9e9e9f',
+  gray_280: '#e5e5e5',
+  gray_290: '#f5f5f7',
 
   // White
   white_10: '#fff',
@@ -41,6 +46,7 @@ export const Colors = {
   white_40: '#FFFFFF99',
   white_50: '#FFFFFF80',
   white_60: '#FFFFFF1A',
+  white_70: '#f0f0f0',
 
   // Red
   red_10: '#ff4d4f',
@@ -48,6 +54,7 @@ export const Colors = {
   red_30: '#902628',
   red_40: '#f70202',
   red_50: '#d43232',
+  red_60: '#ed1c24',
 
   // Blue
   blue_10: '#449fed',
@@ -63,6 +70,7 @@ export const Colors = {
   blue_110: '#8FC6F4',
   blue_120: '#BADBF8',
   blue_130: 'rgba(27, 95, 183, 0.4)',
+  blue_140: '#0071e3',
 
   // Brown
   brown_10: 'rgba(245, 117, 26, 0.70)',

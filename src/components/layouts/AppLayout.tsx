@@ -14,6 +14,6 @@ export const AppLayout: FC = () => {
 };
 
 const StyledAppLayout = styled.div`
-  min-height: 100vh;
-  background: #3e3e3f;
+  height: 100%;
+  width: 100%;
 `;

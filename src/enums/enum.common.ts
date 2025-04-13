@@ -2,6 +2,7 @@ export enum ERoute {
   HOME = '/',
   LOGIN = 'sign-in',
   PRODUCT_DETAILS = '/product-details/:productId',
+  CART = '/cart',
 }
 
 export enum ETextCursor {
@@ -27,4 +28,10 @@ export enum EBreakPoint {
 export enum ETypeButton {
   BUTTON = 'button',
   SUBMIT = 'submit',
+}
+
+export enum EInputAntdError {
+  ERROR = 'error',
+  WARNING = 'warning',
+  NONE = '',
 }
