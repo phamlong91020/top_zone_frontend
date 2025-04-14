@@ -3,6 +3,7 @@ export enum ERoute {
   LOGIN = 'sign-in',
   PRODUCT_DETAILS = '/product-details/:productId',
   CART = '/cart',
+  ORDER_SUCCESS = 'order-success',
 }
 
 export enum ETextCursor {

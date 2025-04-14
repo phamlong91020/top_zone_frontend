@@ -38,6 +38,7 @@ export const Colors = {
   gray_270: '#9e9e9f',
   gray_280: '#e5e5e5',
   gray_290: '#f5f5f7',
+  gray_300: '#8F8C8C',
 
   // White
   white_10: '#fff',
@@ -55,6 +56,7 @@ export const Colors = {
   red_40: '#f70202',
   red_50: '#d43232',
   red_60: '#ed1c24',
+  red_70: '#dd1c1a',
 
   // Blue
   blue_10: '#449fed',
@@ -90,6 +92,7 @@ export const Colors = {
   green_40: '#80C472',
   green_50: '#4b9980',
   green_60: '#67ffc280',
+  green_70: '#00a651',
 
   // Yellow
   yellow_10: '#F9C12A',
