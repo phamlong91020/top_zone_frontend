@@ -10,6 +10,7 @@ const { ProductDetails } = lazyImport(
   'ProductDetails'
 );
 const { Cart } = lazyImport(() => import('@/modules'), 'Cart');
+const { OrderSuccess } = lazyImport(() => import('@/modules'), 'OrderSuccess');
 
 export const AppRouter: FC = () => {
   return (
@@ -19,6 +20,7 @@ export const AppRouter: FC = () => {
           <Route index element={<Home />} />
           <Route path={ERoute.PRODUCT_DETAILS} element={<ProductDetails />} />
           <Route path={ERoute.CART} element={<Cart />} />
+          <Route path={ERoute.ORDER_SUCCESS} element={<OrderSuccess />} />
         </Route>
       </Routes>
     </Suspense>
