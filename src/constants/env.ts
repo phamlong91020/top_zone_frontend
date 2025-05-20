@@ -1,10 +1,10 @@
 const env = import.meta.env;
 
-const { VITE_API_URL, VITE_ENVIRONMENT } = env;
+const { VITE_API_URL, VITE_ENV } = env;
 
 export const config = {
   env: {
     VITE_API_URL,
-    VITE_ENVIRONMENT,
+    VITE_ENV,
   },
 };
