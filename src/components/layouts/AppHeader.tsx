@@ -1,23 +1,12 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { icons } from '@/constants';
 import { Link, useNavigate } from 'react-router-dom';
-import { Drawer } from 'antd';
-import { images } from '@/constants';
 import { THUMBNAIL_ARRAY } from '@/constants/common';
 import styled from 'styled-components';
-import { EBreakPoint, ERoute } from '@/enums';
+import { EBreakPoint } from '@/enums';
 
 export const AppHeader: FC = () => {
-  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const navigate = useNavigate();
-
-  const showDrawer = () => {
-    setOpenDrawer(true);
-  };
-
-  const onClose = () => {
-    setOpenDrawer(false);
-  };
 
   const goToCart = () => {
     navigate('/cart');
@@ -25,7 +14,7 @@ export const AppHeader: FC = () => {
 
   return (
     <StyledHeader className="app-header">
-      <div className="header-mobile">
+      {/* <div className="header-mobile">
         <div className="header-above">
           <div className="menu-icon" onClick={showDrawer}>
             <Link to={ERoute.HOME}>
@@ -99,7 +88,7 @@ export const AppHeader: FC = () => {
             </div>
           ))}
         </Drawer>
-      </div>
+      </div> */}
 
       <div className="header-pc">
         <div className="layout-header-pc">

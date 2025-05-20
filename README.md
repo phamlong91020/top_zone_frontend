@@ -1,18 +1,9 @@
-## This is documentation of "Front end investment"
+- Cách chạy dự án ở bên Back-end:
 
-## This project requires node version 18.0.0 or higher
+Kiểm tra cổng 5432 xem đã chạy hay chưa
 
-## Set up project
+Nếu rồi thì kill nó đi
 
-- yarn
-- yarn dev
+Xong rồi chạy lệnh docker start: docker start 3537a89d83ba
 
-## Tech stack
-
-- ReactJs
-- Typescript
-- Redux Toolkit
-- Styled components
-- Ant Design
-- React Router
-- Axios
+Xong vào IntelliJ -> Vào source dự án -> Click vào nút màu xanh là được
