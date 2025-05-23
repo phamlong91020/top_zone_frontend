@@ -9,3 +9,4 @@ export * from './radio';
 export * from './loading';
 
 export * from './CircleColor';
+export * from './AppErrorBoundary';

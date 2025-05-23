@@ -1,9 +1,16 @@
-import { IProductDetails } from '@/interfaces';
+import { ERoute } from '@/enums';
 import { useGetListProductsMutation } from '@/react-query/Products';
-import { useEffect, useState } from 'react';
+import { listAllProductsSelector, useReduxListAllProducts } from '@/redux';
+import { useEffect } from 'react';
+import { shallowEqual, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export const useHomehooks = () => {
-  const [listAllProducts, setListAllProducts] = useState<IProductDetails[]>([]);
+  const navigate = useNavigate();
+
+  const { setListAllProducts } = useReduxListAllProducts();
+
+  const listAllProducts = useSelector(listAllProductsSelector, shallowEqual);
 
   const { mutate: handleGetListAllProducts } = useGetListProductsMutation({
     configs: {
@@ -21,5 +28,9 @@ export const useHomehooks = () => {
     });
   }, [handleGetListAllProducts]);
 
-  return { listAllProducts };
+  const handleNavigateToProductDetails = (variantId: number) => {
+    navigate(ERoute.PRODUCT_DETAILS.replace(':productId', String(variantId)));
+  };
+
+  return { listAllProducts, handleNavigateToProductDetails };
 };
