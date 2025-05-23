@@ -25,6 +25,7 @@ export const StyledHome = styled.div`
         border: solid 2px #2997ff;
       }
     }
+    margin-bottom: 24px;
   }
 
   > .list-products {

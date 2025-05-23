@@ -1,59 +1,44 @@
 import { FC } from 'react';
 import { StyledProductDetails } from '../styled';
-import { AppButton, AppImage, AppText, CircleColor } from '@/components';
+import { AppButton, AppImage, AppText } from '@/components';
 import {
   Colors,
   LIST_CHECKOUT_INFO,
   LIST_PROMOTIONS_PRODUCT_DETAILS,
 } from '@/constants';
 import { Box, RotateCcw, Truck } from 'lucide-react';
+import { useProductDetailsHooks } from '../hooks';
 
 export const ProductDetails: FC = () => {
+  const { finalProduct, handleAddProductIntoShoppingCart } =
+    useProductDetailsHooks();
+
   return (
     <StyledProductDetails className="product-details">
       <div className="images">
         <AppImage
-          imageUrl="https://cdnv2.tgdd.vn/mwg-static//42/329143/s16/iphone-16-pro-natural-titan-1-638621710014984362-650x650.jpg"
+          imageUrl={finalProduct?.imageUrl || ''}
           width={600}
           height={600}
         />
       </div>
 
       <div className="product-info">
-        <AppText text="iPhone 16 Pro 128GB" fontSize={32} fontWeight={700} />
-
-        <div className="memories">
-          <AppText text="Dung lượng" marginBottom={10} />
-          <div className="wrapper-memory-capacity">
-            <div className="memory-capacity">
-              <AppText text="128GB" />
-            </div>
-            <div className="memory-capacity">
-              <AppText text="256GB" />
-            </div>
-            <div className="memory-capacity">
-              <AppText text="512GB" />
-            </div>
-            <div className="memory-capacity">
-              <AppText text="1TB" />
-            </div>
-          </div>
-        </div>
-
-        <div className="colors">
-          <div className="color">
-            <AppText text="Màu: " marginRight={4} />
-            <AppText text="Titan tự nhiên" />
-          </div>
-          <div className="list-colors">
-            <CircleColor backgroundColor={Colors.gray_240} />
-          </div>
-        </div>
+        <AppText
+          text={`${finalProduct?.productName} ${finalProduct?.color}`}
+          fontSize={32}
+          fontWeight={700}
+          marginBottom={16}
+        />
 
         <div className="info-and-price">
           <div className="price">
             <AppText text="Online Giá Rẻ Quá" fontSize={16} />
-            <AppText text="25.390.000₫" fontSize={24} fontWeight={600} />
+            <AppText
+              text={`${finalProduct?.price}đ`}
+              fontSize={24}
+              fontWeight={600}
+            />
           </div>
           <div className="infomation">
             <div className="first-info">
@@ -82,11 +67,12 @@ export const ProductDetails: FC = () => {
             <div className="button-wrapper">
               <AppButton
                 height={60}
-                text="MUA NGAY GIÁ 25.390.000₫"
+                text="Thêm vào giỏ hàng"
                 backgroundColor={Colors.red_50}
                 borderRadius={12}
                 fontSize={16}
                 fontWeight={600}
+                onClick={() => handleAddProductIntoShoppingCart(finalProduct)}
               />
             </div>
           </div>
@@ -112,7 +98,7 @@ export const ProductDetails: FC = () => {
           <div className="item">
             <Truck color={Colors.white_10} strokeWidth={1.25} />
             <AppText
-              text="Hư gì đổi nấy 12 tháng"
+              text="Giao hàng nhanh toàn quốc"
               fontSize={15}
               fontWeight={300}
             />

@@ -8,3 +8,8 @@ export interface ICustomerCartForm {
   paymentMethod: string;
   cardNumber: string;
 }
+
+export interface IShoppingCartItem {
+  variantId: number;
+  quantity: number;
+}

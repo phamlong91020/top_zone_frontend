@@ -3,7 +3,8 @@ import { icons } from '@/constants';
 import { Link, useNavigate } from 'react-router-dom';
 import { THUMBNAIL_ARRAY } from '@/constants/common';
 import styled from 'styled-components';
-import { EBreakPoint } from '@/enums';
+import { EBreakPoint, ERoute, ETextCursor } from '@/enums';
+import { AppImage } from '../common';
 
 export const AppHeader: FC = () => {
   const navigate = useNavigate();
@@ -94,7 +95,12 @@ export const AppHeader: FC = () => {
         <div className="layout-header-pc">
           <div className="wrapper-banner">
             <div className="top-zone-logo">
-              <img src={icons.TOP_ZONE} alt="TOP_ZONE" />
+              <AppImage
+                imageUrl={icons.TOP_ZONE}
+                alt="TOP_ZONE"
+                cursor={ETextCursor.POINTER}
+                onClick={() => navigate(ERoute.HOME)}
+              />
             </div>
             <div className="apple-reseller">
               <img

@@ -3,16 +3,17 @@ import { StyledHome } from '../styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import { BANNER_ARRAY } from '@/constants';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import { useHomehooks } from '../hooks';
 import { AppImage, AppText } from '@/components';
 import { IProductDetails } from '@/interfaces';
 import { ETextCursor } from '@/enums';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 export const Home: FC = () => {
-  const { listAllProducts } = useHomehooks();
+  const { listAllProducts, handleNavigateToProductDetails } = useHomehooks();
 
   return (
     <StyledHome>
@@ -36,7 +37,11 @@ export const Home: FC = () => {
 
       <div className="list-products">
         {listAllProducts.map((item: IProductDetails, index) => (
-          <div className="product" key={index}>
+          <div
+            className="product"
+            key={index}
+            onClick={() => handleNavigateToProductDetails(item.variantId)}
+          >
             <div className="image">
               <AppImage
                 imageUrl={item.imageUrl}
