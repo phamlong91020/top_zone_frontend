@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { StyledCart } from '../styled';
+import { StyledShoppingCart } from '../styled';
 import {
   AppButton,
   AppButtonIcon,
@@ -21,11 +21,11 @@ import { useCartHooks } from '../hooks';
 import { Minus, Plus } from 'lucide-react';
 import { EPaymentMethod } from '@/enums';
 
-export const Cart: FC = () => {
+export const ShoppingCart: FC = () => {
   const { control, errors, watchValues, handleCheckout } = useCartHooks();
 
   return (
-    <StyledCart className="cart">
+    <StyledShoppingCart className="shopping-cart">
       <div className="wrapper-cart">
         <div className="header">
           <AppButtonIcon
@@ -406,6 +406,6 @@ export const Cart: FC = () => {
           />
         </div>
       </div>
-    </StyledCart>
+    </StyledShoppingCart>
   );
 };

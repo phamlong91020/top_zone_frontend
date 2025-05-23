@@ -28,8 +28,13 @@ export const ProductDetails: FC = () => {
           text={`${finalProduct?.productName} ${finalProduct?.color}`}
           fontSize={32}
           fontWeight={700}
-          marginBottom={16}
+          marginBottom={8}
         />
+
+        <div className="quantity">
+          <AppText text="Số lượng:" />
+          <AppText text={String(finalProduct?.stock) || '0'} />
+        </div>
 
         <div className="info-and-price">
           <div className="price">
@@ -72,6 +77,7 @@ export const ProductDetails: FC = () => {
                 borderRadius={12}
                 fontSize={16}
                 fontWeight={600}
+                disabled={!finalProduct?.stock}
                 onClick={() => handleAddProductIntoShoppingCart(finalProduct)}
               />
             </div>

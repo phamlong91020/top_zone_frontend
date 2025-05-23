@@ -1,7 +1,7 @@
 import { Colors } from '@/constants';
 import styled from 'styled-components';
 
-export const StyledCart = styled.form`
+export const StyledShoppingCart = styled.form`
   width: 100%;
   height: 100%;
   background-color: ${Colors.white_70};
