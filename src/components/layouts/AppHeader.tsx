@@ -2,16 +2,21 @@ import { FC } from 'react';
 import { icons } from '@/constants';
 import { Link, useNavigate } from 'react-router-dom';
 import { THUMBNAIL_ARRAY } from '@/constants/common';
-import styled from 'styled-components';
 import { EBreakPoint, ERoute, ETextCursor } from '@/enums';
 import { AppImage } from '../common';
+import { shallowEqual, useSelector } from 'react-redux';
+import { shoppingCartSelector } from '@/redux';
+import styled from 'styled-components';
 
 export const AppHeader: FC = () => {
   const navigate = useNavigate();
 
-  const goToCart = () => {
-    navigate('/cart');
-  };
+  const shoppingCart = useSelector(shoppingCartSelector, shallowEqual);
+
+  const totalProductInShoppingCart = shoppingCart.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   return (
     <StyledHeader className="app-header">
@@ -125,9 +130,14 @@ export const AppHeader: FC = () => {
               <img src={icons.SEARCH_WHITE} alt="SEARCH_WHITE" />
             </div>
 
-            <div className="cart" onClick={goToCart}>
+            <div
+              className="cart"
+              onClick={() => navigate(ERoute.SHOPPING_CART)}
+            >
               <img src={icons.CART_WHITE} alt="CART_WHITE" />
-              <div className="cart-items">1</div>
+              <div className="cart-items">
+                {totalProductInShoppingCart || '0'}
+              </div>
             </div>
           </div>
         </div>

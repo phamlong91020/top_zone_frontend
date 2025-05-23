@@ -2,7 +2,7 @@ export enum ERoute {
   HOME = '/',
   LOGIN = 'sign-in',
   PRODUCT_DETAILS = '/product-details/:productId',
-  CART = '/cart',
+  SHOPPING_CART = '/shopping-cart',
   ORDER_SUCCESS = 'order-success',
 }
 
